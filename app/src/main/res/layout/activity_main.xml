@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Pilih Menu"
+        android:textSize="20pt"
+        android:textAlignment="center"
+        android:gravity="center_horizontal"
+        android:textColor="@color/black"
+        android:fontFamily="serif"
+        android:id="@+id/tv1">
+    </TextView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/rv"
+        android:layout_below="@id/tv1">
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Order:"
+        android:textSize="10pt"
+        android:textAlignment="center"
+        android:gravity="center_horizontal"
+        android:textColor="@color/black"
+        android:fontFamily="serif"
+        android:id="@+id/tv2"
+        android:layout_below="@id/rv">
+    </TextView>
+
+    <EditText
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:hint="Minuman"
+        android:id="@+id/minum"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/tv2"></EditText>
+
+    <EditText
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:hint="Banyak"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/banyak"
+        android:layout_below="@id/minum"></EditText>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Input Pesanan"
+        android:id="@+id/input"
+        android:layout_below="@id/banyak">
+    </Button>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Contact Person"
+        android:id="@+id/cp"
+        android:layout_below="@id/input">
+    </Button>
+
+
+</RelativeLayout>
