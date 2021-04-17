@@ -24,18 +24,21 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        buton1 = findViewById(R.id.input);
-        buton2 = findViewById(R.id.cp);
-        Minum = findViewById(R.id.minum);
-        Banyak = findViewById(R.id.banyak);
+        EditText mMinum = findViewById(R.id.minum);
+        EditText mBanyak = findViewById(R.id.banyak);
+        Button buton1 = findViewById(R.id.input);
+        Button buton2 = findViewById(R.id.cp);
 
         buton1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                String minum = mMinum.getText().toString();
+                String banyak = mBanyak.getText().toString();
+
                 Intent data = new Intent(MainActivity.this,DenganData.class);
-                data.putExtra(Minum);
-                data.putExtra(Banyak);
-                startActivity();
+                data.putExtra("Minum", minum);
+                data.putExtra("Banyak", banyak);
+                startActivity(data);
             }
         });
         buton2.setOnClickListener(new View.OnClickListener() {

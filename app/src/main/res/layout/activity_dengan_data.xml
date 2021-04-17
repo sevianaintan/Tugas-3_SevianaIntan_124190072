@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="10pt"
     tools:context=".DenganData">
 
     <TextView
@@ -22,13 +23,16 @@
         android:layout_below="@id/judul"
         android:layout_centerHorizontal="true"
         android:textSize="10pt"
-        android:text="Pesanan Anda:"></TextView>
+        android:id="@+id/banyak"
+        android:text="\nPesanan Anda:"></TextView>
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/TVdata"
         android:textSize="10pt"
-        android:textColor="@color/black"></TextView>
+        android:textColor="@color/black"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/banyak"></TextView>
 
 
 </RelativeLayout>
